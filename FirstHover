@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>hover()方法切换事件</title>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <body>
+        <h3>hover()方法切换事件</h3>
+        <div>别走！你就是土豪</div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $("div").hover(
+                function () {
+                    $(this).addClass("orange");
+                    $(this).html("土豪大人大驾光临")
+                },
+                function () {
+                    $(this).removeClass("orange")
+                    $(this).html("土豪大人别走")
+                })
+            });
+        </script>
+    </body>
+</html>

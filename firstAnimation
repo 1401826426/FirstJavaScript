@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>show()和hide()方法动画方式显示和隐藏元素</title>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+       
+    </head>
+    
+    <body>
+        <h3>show()和hide()方法动画方式显示和隐藏元素</h3>
+        <div>
+            <h4>我喜欢吃的水果</h4>
+            <ul>
+                <li>苹果</li>
+                <li>甘桔</li>
+                <li>梨</li>
+            </ul>
+            <input id="hidval" type="hidden" value="0"/>
+        </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $("h4").bind("click", function () {
+                    if ($("#hidval").val() == 0) {
+                        $("ul").show("fast" , function(){
+                            $("#hidval").val(1);
+                        })
+                    } else {
+                        $("ul").hide("slow" , function(){
+                            $("#hidval").val(0);
+                        })
+                    }
+                })
+            });
+        </script>
+    </body>
+</html>
